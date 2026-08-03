@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /oferta
+Disallow: /privacy
+Sitemap: https://legche.online/sitemap.xml

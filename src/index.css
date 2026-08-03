@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@theme {
+  /* ============================================================
+     Палитра Inga Orange — токены из приложения (переданы Ингой 04.07):
+     фон #FAF5F0, оранжевый #FF6200, текст #2C1A0E, границы #EDE5DF.
+     ПРОИЗВОДНЫЕ (orange-deep, orange-mist, ink-soft) выведены из
+     базовых — сверить с кодом приложения, если там есть готовые.
+     Бордовый заголовков взят из фирменного знака (летящая фигура):
+     #601645. Если в приложении есть свой токен — сверить и заменить.
+     ============================================================ */
+  --color-cream: #faf5f0;       /* фон страницы */
+  --color-card: #ffffff;        /* карточки */
+  --color-ink: #2c1a0e;         /* основной текст */
+  --color-ink-soft: #7a6a5e;    /* вторичный текст (производный от ink) */
+  --color-orange: #ff6200;      /* действия: кнопки, акценты, ссылки */
+  --color-orange-deep: #d95300; /* hover/active (производный) */
+  --color-orange-mist: #ffe9db; /* плашки, чипсы (производный) */
+  --color-bordeaux: #601645;    /* заголовки — бордовый из фирменного знака (волосы фигуры) */
+  --color-leaf: #4c7a4c;        /* цифры лёгкой версии */
+  --color-leaf-mist: #eef4ec;
+  --color-line: #ede5df;        /* границы карточек */
+
+  --font-display: 'Golos Text', system-ui, -apple-system, sans-serif; /* без засечек — правка Инги */
+  --font-body: 'Golos Text', system-ui, -apple-system, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-rise { animation: rise 0.35s ease-out both; }
+
+:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 2px;
+}
