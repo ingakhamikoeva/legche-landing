@@ -13,6 +13,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         oferta: resolve(__dirname, 'oferta.html'),
         privacy: resolve(__dirname, 'privacy.html'),
+        consentMarketing: resolve(__dirname, 'consent-marketing.html'),
       },
     },
   },
