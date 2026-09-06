@@ -8,7 +8,7 @@ import mark from '../assets/mark.png';
 import { recipePhoto } from '../lib/photos';
 import {
   IconLesson, IconPlate, IconChat, IconHeadphones, IconDiary, IconShield,
-  IconVk, IconTelegram, IconYoutube, IconInstagram, IconMax,
+  IconVk, IconTelegram, IconYoutube, IconMax,
 } from './Icons';
 
 /* ---------- Шапка (ТЗ v2, раздел 2) ---------- */
@@ -356,15 +356,10 @@ export function Footer() {
              className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-mist text-orange-deep transition-colors hover:bg-orange hover:text-white">
             <IconTelegram className="h-5 w-5" />
           </a>
-          <a href="https://www.youtube.com/@Inga_Orange" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.youtube.com/@legche_online" target="_blank" rel="noopener noreferrer"
              aria-label="YouTube"
              className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-mist text-orange-deep transition-colors hover:bg-orange hover:text-white">
             <IconYoutube className="h-5 w-5" />
-          </a>
-          <a href="https://www.instagram.com/inga_orange_" target="_blank" rel="noopener noreferrer"
-             aria-label="Instagram"
-             className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-mist text-orange-deep transition-colors hover:bg-orange hover:text-white">
-            <IconInstagram className="h-5 w-5" />
           </a>
           <a href="https://max.ru/se13278182_biz" target="_blank" rel="noopener noreferrer"
              aria-label="MAX"
@@ -375,9 +370,57 @@ export function Footer() {
         <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
           <a href="/oferta" className="hover:text-orange">Публичная оферта</a>
           <a href="/privacy" className="hover:text-orange">Политика обработки персональных данных</a>
+          <a href="/consent-marketing" className="hover:text-orange">Согласие на рекламную рассылку</a>
         </div>
-        {/* Реквизиты (ИП / самозанятость) — вписать перед подключением ЮKassa */}
-        <p className="mt-4">© {new Date().getFullYear()} Легче · legche.online</p>
+
+        {/* Реквизиты и условия оплаты — требование Робокассы к подвалу сайта.
+            Все формулировки взяты из оферты (разделы 4, 5, 6, 7), редакция
+            от 1 сентября 2026. Менять здесь — только вместе с офертой. */}
+        <div className="mt-8 border-t border-line pt-6">
+          <p className="font-semibold text-ink">Реквизиты</p>
+          <p className="mt-2">Самозанятый Хамикоева Инга Сергеевна · ИНН 143304020228</p>
+          <p>г. Берёзовский, Свердловская область</p>
+          <p className="mt-1">
+            <a href="mailto:support@legche.online" className="hover:text-orange">support@legche.online</a>
+            {" · "}
+            <a href="tel:+79933492106" className="hover:text-orange">+7 993 349-21-06</a>
+          </p>
+        </div>
+
+        <div className="mt-6">
+          <p className="font-semibold text-ink">Оплата и подписка</p>
+          <p className="mt-2">
+            Подписка — 990 ₽ в месяц или 4 990 ₽ в год для первых 100 подписчиц,
+            далее 1 490 ₽ в месяц и 6 990 ₽ в год. Индивидуальная консультация — 7 000 ₽.
+            НДС не облагается: применяется налог на профессиональный доход.
+          </p>
+          <p className="mt-2">
+            Пробный период — 7 дней бесплатно. Данные карты не требуются,
+            автосписаний в пробном периоде нет.
+          </p>
+          <p className="mt-2">
+            После первой оплаты подписка продлевается автоматически: раз в месяц
+            или раз в год в зависимости от тарифа, на сумму выбранного тарифа.
+            Согласие на автосписание даётся отдельно при первой оплате, до её
+            подтверждения. О предстоящем списании приходит письмо за 3 дня.
+          </p>
+          <p className="mt-2">
+            Отменить автопродление можно в любой момент в личном кабинете,
+            раздел «Профиль». Доступ сохраняется до конца оплаченного периода.
+          </p>
+          <p className="mt-2">
+            Доступ к приложению открывается сразу после оплаты и действует
+            в течение оплаченного периода. Возврат — за неиспользованные полные
+            дни, по заявлению на support@legche.online; рассмотрение до 10 рабочих
+            дней. Чек направляется на почту в соответствии с 422-ФЗ.
+          </p>
+          <p className="mt-2">
+            Оплата принимается через платёжный сервис «Робокасса». Данные карты
+            вводятся на стороне платёжного сервиса и нам не передаются.
+          </p>
+        </div>
+
+        <p className="mt-8">© {new Date().getFullYear()} Легче · legche.online</p>
       </div>
     </footer>
   );
