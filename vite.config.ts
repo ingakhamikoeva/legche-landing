@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         oferta: resolve(__dirname, 'oferta.html'),
+        userAgreement: resolve(__dirname, 'user-agreement.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         consentMarketing: resolve(__dirname, 'consent-marketing.html'),
       },
