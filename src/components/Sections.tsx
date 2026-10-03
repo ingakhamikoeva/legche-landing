@@ -369,6 +369,7 @@ export function Footer() {
         </div>
         <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
           <a href="/oferta" className="hover:text-orange">Публичная оферта</a>
+          <a href="/user-agreement.html" className="hover:text-orange">Пользовательское соглашение</a>
           <a href="/privacy" className="hover:text-orange">Политика обработки персональных данных</a>
           <a href="/consent-marketing" className="hover:text-orange">Согласие на рекламную рассылку</a>
         </div>
