@@ -14,6 +14,7 @@ export default defineConfig({
         oferta: resolve(__dirname, 'oferta.html'),
         userAgreement: resolve(__dirname, 'user-agreement.html'),
         privacy: resolve(__dirname, 'privacy.html'),
+        consentPersonalData: resolve(__dirname, 'consent-personal-data.html'),
         consentMarketing: resolve(__dirname, 'consent-marketing.html'),
       },
     },
